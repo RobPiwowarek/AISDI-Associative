@@ -143,7 +143,7 @@ namespace aisdi {
             BucketNode *node = buckets[index];
 
             for (int i = 0; i < sizes[index]; ++i){
-                if (buckets[index][i].val->first == key) return ConstIterator(this, index, node);
+                if (node->val->first == key) return ConstIterator(this, index, node);
 
                 node = node->next;
             }
